@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Meal_Planner</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Updater\**" />
+    <EmbeddedResource Remove="Updater\**" />
+    <None Remove="Updater\**" />
+    <Page Remove="Updater\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Client Manager\desktop.ini" />
+    <None Remove="Data\bin\ClientNames.mp" />
+    <None Remove="Data\bin\desktop.ini" />
+    <None Remove="Data\desktop.ini" />
+    <None Remove="desktop.ini" />
+    <None Remove="Essential\desktop.ini" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\bin\ClientNames.mp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GRM Build Tracker">
+      <HintPath>..\GRM Build Tracker\bin\Release\net6.0\GRM Build Tracker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Meal Planner": {
+      "commandName": "Project",
+      "commandLineArgs": "build"
+    }
+  }
+}

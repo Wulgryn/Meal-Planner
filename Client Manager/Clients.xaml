@@ -1,0 +1,24 @@
+﻿<Window x:Class="Meal_Planner.Client_Manager.Clients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meal_Planner.Client_Manager"
+        mc:Ignorable="d"
+        Title="Clients" Height="450" Width="800" Background="#FFBFBFBF" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Height="59" VerticalAlignment="Top" Content="Kliensek" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" Margin="199,0,0,0" />
+        <ScrollViewer Width="500" VerticalScrollBarVisibility="Auto" Margin="0,59,0,0" HorizontalAlignment="Left">
+            <Grid Background="#FF6F6F6F">
+                <local:ClientPreview Height="45" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="460"/>
+            </Grid>
+        </ScrollViewer>
+        <Button x:Name="button" Content="Button" Margin="515,59,15,325">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
