@@ -24,5 +24,14 @@ namespace Meal_Planner.Client_Manager
         {
             InitializeComponent();
         }
+        public ClientData clientData;
+        public ClientPreview(ref ClientData client_data)
+        {
+            InitializeComponent();
+            client_name.Content = client_data.Name;
+            created_date.Content = client_data.GetCreationDate();
+            modified_date.Content = client_data.GetModifiedDate();
+            clientData = client_data;
+        }
     }
 }

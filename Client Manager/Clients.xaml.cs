@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,16 @@ namespace Meal_Planner.Client_Manager
         public Clients()
         {
             InitializeComponent();
+            menu_frame.Content = new OptionsPage(this);
+            LoadCLients();
         }
 
-        private void client_list_Loaded(object sender, RoutedEventArgs e)
+        public void LoadCLients()
         {
+            ClientManager.selectedClient = null;
+            menu_frame.Content = new OptionsPage(this);
+            client_list.Children.Clear();
+            ClientManager.LoadClientPreviews(client_list,this);
         }
     }
 }

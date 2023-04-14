@@ -1,0 +1,56 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Meal_Planner.Client_Manager"
+      xmlns:Options="clr-namespace:Meal_Planner.Client_Manager" 
+      x:Class="Meal_Planner.Client_Manager.OptionsPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="300"
+      Title="OptionsPage">
+    <Border>
+        <Grid Background="#FFBFBFBF">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="create_client" Content="Új kliens" FontFamily="Comic Sans MS" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="10,65,10,0" Height="50" VerticalAlignment="Top" Click="create_client_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="load_client" Content="Betöltés" FontFamily="Comic Sans MS" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="10,120,10,0" Click="create_client_Click" Height="50" VerticalAlignment="Top">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="delete_client" FontFamily="Comic Sans MS" FontSize="24" 
+                    Margin="10,175,10,0" Height="50" VerticalAlignment="Top"
+                    Foreground="Red" d:LayoutOverrides="VerticalAlignment" Click="delete_client_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Source="/Data/icons/delete.png" Stretch="Uniform" Height="25" Width="24"/>
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Foreground="Red"
+                   Text="Törlés" FontFamily="Comic Sans MS" FontSize="24" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <RichTextBox x:Name="client_description" Margin="10,230,10,10" Padding="5,0,5,0"
+                     FontFamily="Comic Sans MS" FontSize="13" HorizontalScrollBarVisibility="Auto" 
+                         VerticalScrollBarVisibility="Auto" IsReadOnly="True">
+                <RichTextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+        </Grid>
+    </Border>
+</Page>

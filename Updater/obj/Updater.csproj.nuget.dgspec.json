@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj": {}
+    "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj": {}
   },
   "projects": {
-    "E:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj": {
+    "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
+        "projectUniqueName": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
         "projectName": "Updater",
-        "projectPath": "E:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
+        "projectPath": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
         "packagesPath": "C:\\Users\\Workstation\\.nuget\\packages\\",
-        "outputPath": "E:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\obj\\",
+        "outputPath": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

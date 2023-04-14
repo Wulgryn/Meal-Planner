@@ -7,18 +7,17 @@
         mc:Ignorable="d"
         Title="Clients" Height="450" Width="800" Background="#FFBFBFBF" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Height="59" VerticalAlignment="Top" Content="Kliensek" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" Margin="199,0,0,0" />
+        <Label Height="59" VerticalAlignment="Top" Content="Kliensek" HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" 
+               Margin="199,0,0,0" />
         <ScrollViewer Width="500" VerticalScrollBarVisibility="Auto" Margin="0,59,0,0" HorizontalAlignment="Left">
-            <Grid Background="#FF6F6F6F">
-                <local:ClientPreview Height="45" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="460"/>
+            <Grid Name="client_list" Background="#FF6F6F6F">
+                <local:ClientPreview Height="45" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                     Width="460" Background="#FFA7A7A7" Foreground="Black"/>
             </Grid>
         </ScrollViewer>
-        <Button x:Name="button" Content="Button" Margin="515,59,15,325">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="3"/>
-                </Style>
-            </Button.Resources>
-        </Button>
+
+        <Frame x:Name="menu_frame" Margin="500,0,0,0"
+               NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
     </Grid>
 </Window>

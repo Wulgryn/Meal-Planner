@@ -7,12 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="45" d:DesignWidth="460" Height="45
              " Width="460" Background="#FFA7A7A7">
-    <Grid>
-        <Label x:Name="client_name" Content="Polgár Sándor Bendegúz" Margin="10,0,220,0" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
-        <Label x:Name="created_date_label" Content="Létrehozva" Margin="245,2,120,23" Padding="0,0,0,0" HorizontalContentAlignment="Center" Height="20" VerticalContentAlignment="Center"/>
-        <Label x:Name="created_date" Content="2023.07.12" Margin="245,22,120,2" Padding="0,0,0,0" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center"/>
-        <Label x:Name="modified_date_label" Content="Utoljára módosítva" Margin="345,2,10,23" Padding="0,0,0,0" HorizontalContentAlignment="Center" Height="20" VerticalContentAlignment="Center"/>
-        <Label x:Name="created_date_Copy" Content="2023.07.12" Margin="355,22,10,2" Padding="0,0,0,0" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center"/>
+    <Grid x:Name="main_grid">
+        <Label 
+            x:Name="client_name" Content="Polgár Sándor Bendegúz" 
+            Margin="10,0,220,0" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+        <Label 
+            x:Name="created_date_label" Content="Létrehozva" 
+            Margin="245,2,120,23" Padding="0,0,0,0" HorizontalContentAlignment="Center" Height="20" VerticalContentAlignment="Center"/>
+        <Label 
+            x:Name="created_date" Content="2023.07.12" 
+            Margin="245,22,120,2" Padding="0,0,0,0" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center"/>
+        <Label 
+            x:Name="modified_date_label" Content="Utoljára módosítva" 
+            Margin="345,2,10,23" Padding="0,0,0,0" HorizontalContentAlignment="Center" Height="20" VerticalContentAlignment="Center"/>
+        <Label 
+            x:Name="modified_date" Content="2023.07.12" 
+            Margin="355,22,10,2" Padding="0,0,0,0" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center"/>
 
     </Grid>
 </UserControl>
