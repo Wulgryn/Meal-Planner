@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Meal_Planner.Meal_Manager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,31 @@ namespace Meal_Planner.Client_Manager
             if (result != MessageBoxResult.Yes) return;
             ClientManager.DeleteClient();
             main_window.LoadCLients();
+        }
+
+        private void ingredients_Click(object sender, RoutedEventArgs e)
+        {
+            Ingredients ingredients = new Ingredients();
+            ingredients.Activate();
+            ingredients.Owner = main_window;
+            ingredients.Show();
+            main_window.Hide();
+        }
+
+        private void recipes_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("Munkálatok alatt...");
+            //return;
+            Recipes recipes = new Recipes();
+            recipes.Activate();
+            recipes.Owner = main_window;
+            recipes.Show();
+            main_window.Hide();
+        }
+
+        private void load_client_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Munkálatok alatt...");
         }
     }
 }

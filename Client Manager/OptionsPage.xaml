@@ -21,7 +21,9 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="load_client" Content="Betöltés" FontFamily="Comic Sans MS" FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="10,120,10,0" Click="create_client_Click" Height="50" VerticalAlignment="Top">
+            <Button x:Name="load_client" Content="Betöltés" FontFamily="Comic Sans MS" FontSize="24" 
+                    RenderTransformOrigin="0.5,0.5" Margin="10,120,10,0"
+                    Height="50" VerticalAlignment="Top" Click="load_client_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -37,7 +39,8 @@
                     </Style>
                 </Button.Resources>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <Image UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Source="/Data/icons/delete.png" Stretch="Uniform" Height="25" Width="24"/>
+                    <Image UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Source="/Data/icons/delete.png" 
+                           Stretch="Uniform" Height="25" Width="24"/>
                     <TextBlock x:Name="textBlock" TextWrapping="Wrap" Foreground="Red"
                    Text="Törlés" FontFamily="Comic Sans MS" FontSize="24" VerticalAlignment="Center"/>
                 </StackPanel>
@@ -51,6 +54,24 @@
                     </Style>
                 </RichTextBox.Resources>
             </RichTextBox>
+            <Button x:Name="recipes" Content="Receptek" FontFamily="Comic Sans MS" 
+                    FontSize="24" RenderTransformOrigin="0.5,0.5" Margin="150,10,10,0" 
+                    Height="50" VerticalAlignment="Top" Click="recipes_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ingredients" Content="Alapanyagok" FontFamily="Comic Sans MS" 
+                    FontSize="22" RenderTransformOrigin="0.5,0.5" Margin="10,10,0,0" Height="50" 
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Width="135" Click="ingredients_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
     </Border>
 </Page>

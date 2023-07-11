@@ -1,0 +1,216 @@
+﻿<Window x:Class="Meal_Planner.Meal_Manager.Ingredients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meal_Planner.Meal_Manager"
+        mc:Ignorable="d"
+        Title="Meal Planner - Ingredients" Height="1080" Width="1920" 
+        WindowStartupLocation="CenterOwner" Background="#FFBFBFBF" Closing="Window_Closing"
+         KeyDown="Window_KeyDown" WindowStyle="ThreeDBorderWindow" 
+        MinHeight="450" MinWidth="800" SizeChanged="Window_SizeChanged" WindowState="Maximized"
+        >
+    <Grid Name="main_grid">
+
+        <ScrollViewer
+            Name="scrollviewer" VerticalScrollBarVisibility="Visible" Height="780" Margin="0,96,0,0" Background="Black" VerticalAlignment="Top">
+            <Grid  Name="ingredient_list" Background="#FFD4D4D4" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <local:IngredientPreview Margin="0,54,0,0" d:LayoutOverrides="VerticalAlignment" Height="120" 
+                                         VerticalAlignment="Top" Width="1900"/>
+
+            </Grid>
+        </ScrollViewer>
+
+        <Line Name="line_1" X1="720" Y2="3000" X2="720" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+        <Line Name="line_2" X1="888" Y2="3000" X2="888" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+        <Line Name="line_3" X1="1056" Y2="3000" X2="1056" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+        <Line Name="line_4" X1="1200" Y2="3000" X2="1200" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+        <Line Name="line_5" X1="1404" Y2="3000" X2="1404" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+        <Line Name="line_6" X1="1900" Y2="3000" X2="1900" Stroke="#FF848484" Grid.ColumnSpan="2"/>
+
+        <Grid Name="search_zone" Background="#FF6F6F6F" HorizontalAlignment="Center" Width="1920" Margin="0,877,0,0" Height="187" VerticalAlignment="Top">
+            <TextBox x:Name="ingredient_name" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="10,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" d:LayoutOverrides="VerticalAlignment" 
+                     FontSize="30" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="705" TextChanged="ingredient_name_TextChanged" KeyDown="ingredient_name_KeyDown">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24
+                                "/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="energy_value" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="720,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                     FontSize="30" VerticalScrollBarVisibility="Auto" d:LayoutOverrides="VerticalAlignment" Width="163" HorizontalAlignment="Left">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="protein_value" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="888,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" VerticalScrollBarVisibility="Auto" d:LayoutOverrides="VerticalAlignment" Width="163" HorizontalAlignment="Left">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="fat_value" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="1056,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" VerticalScrollBarVisibility="Auto" d:LayoutOverrides="VerticalAlignment" Width="139" HorizontalAlignment="Left">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="carbohydrate_value" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="1200,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" VerticalScrollBarVisibility="Auto" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="199">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="back" Content="Vissza"
+                HorizontalAlignment="Left" Margin="10,82,0,50" 
+                Width="180" FontSize="30" 
+                    FontFamily="Comic Sans MS" Padding="0,-1,0,0" Click="back_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="save" Content="Mentés"
+                HorizontalAlignment="Left" Margin="1683,82,0,50" 
+                Width="216" FontSize="30" 
+                FontFamily="Comic Sans MS" Padding="0,-1,0,0" Click="save_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <ComboBox x:Name="portion_type" Margin="427,82,1205,50" Width="288" SelectedIndex="0" Padding="6,1,5,0" FontFamily="Comic Sans MS" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="portion_type_SelectionChanged" FontSize="30">
+                <ComboBoxItem Content="100g"/>
+                <ComboBoxItem Content="db (50g)"/>
+                <ComboBoxItem Content="Saját tömeg"/>
+            </ComboBox>
+            <Button x:Name="delete_ingredient" Content="Törlés"
+                HorizontalAlignment="Left" Margin="1525,82,0,50" 
+                Width="144" FontSize="30" 
+                FontFamily="Comic Sans MS" Padding="0,-1,0,0" Foreground="Red" Click="delete_ingredient_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ingredient_import" Content="Be importálás vágólapról"
+                HorizontalAlignment="Left" Margin="1056,82,0,50" 
+                Width="448" FontSize="30" 
+                FontFamily="Comic Sans MS" Padding="0,-1,0,0" Foreground="#FF0033FF" Click="ingredient_import_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <CheckBox x:Name="enable_search" Content="" Margin="218,82,0,50" Padding="0,0,0,0" 
+                      VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                      FontFamily="Comic Sans MS" FontSize="7" RenderTransformOrigin="0.5,0.5" Checked="enable_search_Checked" Unchecked="enable_search_Unchecked" HorizontalAlignment="Left">
+                <CheckBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </CheckBox.Resources>
+                <CheckBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="3.84" ScaleY="4.8"/>
+                    </TransformGroup>
+                </CheckBox.RenderTransform>
+            </CheckBox>
+            <Label x:Name="label1" Content="Keresés" Margin="262,82,0,50" FontFamily="Comic Sans MS" Padding="0,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28.8" HorizontalAlignment="Left" Width="160"/>
+            <TextBox x:Name="custom_mass_value" TextWrapping="NoWrap" Text="100g" 
+                MaxLines="1" FontFamily="Comic Sans MS"
+                Margin="720,82,1037,50"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                FontSize="30" Width="163">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="past_action_value" TextWrapping="NoWrap" 
+                MaxLines="1" FontFamily="Comic Sans MS" Height="72" VerticalAlignment="Top"
+                Margin="1404,5,0,0"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" VerticalScrollBarVisibility="Auto" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="495">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="24"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+        </Grid>
+
+        <Grid Name="labels" MinHeight="40" MinWidth="800" Height="96" VerticalAlignment="Top" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+
+            <Label x:Name="ingredient_label" Content="Élelmiszer" BorderThickness="2"
+               Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="48" 
+               VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" d:LayoutOverrides="VerticalAlignment" FontSize="30" HorizontalAlignment="Left" Width="720"/>
+            <Label x:Name="portion_label" Content="g / db" Margin="0,48,0,2" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" Width="720" VerticalAlignment="Top" Height="48"/>
+
+            <Label x:Name="energy_label" Content="Energia" Margin="720,0,0,0" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="48" 
+                VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" Width="168" d:LayoutOverrides="VerticalAlignment"/>
+            <Label x:Name="portion_label1" Content="kJ" Margin="720,48,0,0" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="168"/>
+
+            <Label x:Name="protein_label" Content="Fehérje" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="48" 
+                VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Margin="888,0,0,0" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="168"/>
+            <Label x:Name="portion_label2" Content="g" Margin="885,48,0,3" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" 
+                   VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" Height="48" Width="168"/>
+
+            <Label x:Name="fat_label" Content="Zsír" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="48" 
+                VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Margin="1056,0,0,0" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="144"/>
+            <Label x:Name="portion_label3" Content="g" Margin="1056,48,0,1" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" 
+                Width="144" Height="48"/>
+
+            <Label x:Name="carbohydrate_label" Content="Szénhidrát" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="45" 
+                VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Margin="1200,0,0,0" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="204"/>
+            <Label x:Name="portion_label4" Content="g" Margin="1200,48,0,0" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" 
+                Width="204" Height="48"/>
+
+            <Label x:Name="past_action_label" Content="Sütés / Főzés utáni tömeg" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" Height="48" 
+                VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Margin="1404,0,0,0" HorizontalAlignment="Left" Width="468" d:LayoutOverrides="VerticalAlignment"/>
+            <Label x:Name="portion_label5" Content="g / x" Margin="1404,48,0,0" 
+                Foreground="Red" FontFamily="Comic Sans MS" Padding="0,0,0,0" HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" 
+                Width="468" Height="48" d:LayoutOverrides="Height"/>
+        </Grid>
+
+    </Grid>
+</Window>

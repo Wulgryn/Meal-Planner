@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Meal_Planner.Client_Manager"
         mc:Ignorable="d"
-        Title="Clients" Height="450" Width="800" Background="#FFBFBFBF" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Meal Planner - Clients" Height="450" Width="800" Background="#FFBFBFBF" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Label Height="59" VerticalAlignment="Top" Content="Kliensek" HorizontalContentAlignment="Center" 
                VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" 

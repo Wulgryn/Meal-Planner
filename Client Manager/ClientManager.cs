@@ -124,7 +124,7 @@ namespace Meal_Planner.Client_Manager
                 {
                     clientDatas[i] = new ClientData(client_dir.Name);
                 }
-                catch (FileNotFoundException fex)
+                catch (FileNotFoundException)
                 {
                     clientDatas[i] = new ClientData(client_dir.Name,true);
                 }
@@ -213,6 +213,53 @@ namespace Meal_Planner.Client_Manager
         public static string ToString(this RichTextBox rtb)
         {
             return new TextRange(rtb.Document.ContentStart, rtb.Document.ContentEnd).Text;
+        }
+        public static bool EqualsAND(this string equalto, params string[] strings)
+        {
+            foreach (string s in strings)
+            {
+                if(equalto != s) return false;
+            }
+            return true;
+        }
+        public static bool EqualsOR(this string equalto, params string[] strings)
+        {
+            foreach (string s in strings)
+            {
+                if (equalto == s) return true;
+            }
+            return false;
+        }
+        public static bool EqualsAND(this char equalto, params char[] chars)
+        {
+            foreach (char c in chars)
+            {
+                if (equalto != c) return false;
+            }
+            return true;
+        }
+        public static bool EqualsOR(this char equalto, params char[] chars)
+        {
+            foreach (char c in chars)
+            {
+                if (equalto == c) return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// cstd: Convert String To Double
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static double cstd(this string str)
+        {
+            double val;
+            if(!double.TryParse(str, out val))
+            {
+                MessageBox.Show("Valahol nem jó értéket adtál meg!\nFigyelj rá, hogy ahova számot kell írni ott csak is szám legyen!");
+                return -1;
+            }
+            return double.Parse(str);
         }
     }
 }

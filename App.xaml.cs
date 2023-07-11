@@ -29,6 +29,22 @@ namespace Meal_Planner
             CheckBaseFolders(Paths.clients_d);
             CheckBaseFolders(Paths.ingredients_d);
             CheckBaseFolders(Paths.recipes_d);
+            string del_recipes_path = Paths.recipes_d + "/tempdel.mp";
+            FileInfo fi = new FileInfo(del_recipes_path);
+            if(!fi.Exists)
+            {
+                try
+                {
+                    Directory.Delete(Paths.recipes_d, true);
+                }
+                catch (Exception)
+                {
+
+                }
+                
+                CheckBaseFolders(Paths.recipes_d);
+                fi.Create();
+            }
         }
 
         private void CheckBaseFolders(string path)

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
-      "projectName": "Updater",
-      "projectPath": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
+      "projectUniqueName": "C:\\Users\\Workstation\\Desktop\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
+      "projectName": "Meal Planner",
+      "projectPath": "C:\\Users\\Workstation\\Desktop\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\Updater.csproj",
       "packagesPath": "C:\\Users\\Workstation\\.nuget\\packages\\",
-      "outputPath": "G:\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\obj\\",
+      "outputPath": "C:\\Users\\Workstation\\Desktop\\Google Drive\\Code\\C#\\Meal Planner\\Updater\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

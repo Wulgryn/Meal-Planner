@@ -6,6 +6,7 @@
     <RootNamespace>Meal_Planner</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Data\icons\lunch.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\icons\lunch.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="GRM Build Tracker">
       <HintPath>..\GRM Build Tracker\bin\Release\net6.0\GRM Build Tracker.dll</HintPath>
     </Reference>
@@ -34,6 +39,7 @@
   <ItemGroup>
     <Folder Include="Client Manager\Options\" />
     <Folder Include="Data\bin\ingredients\" />
+    <Folder Include="Data\bin\clients\" />
     <Folder Include="Data\bin\recipes\" />
   </ItemGroup>
 

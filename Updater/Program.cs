@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection;
 
 namespace Updater
 {
@@ -17,7 +18,12 @@ namespace Updater
                 if (File.Exists("Data/bin/Meal Planner.exe"))
                 {
                     Console.WriteLine("Starting application...");
-                    Process.Start("Data/bin/Meal Planner.exe");
+                    ProcessStartInfo psi = new ProcessStartInfo();
+                    psi.FileName = "cmd.exe";
+                    psi.WorkingDirectory = $"{new DirectoryInfo(".").FullName}/Data/bin";
+                    psi.Arguments = "/c \"call \"Meal Planner.exe\"\"";
+                    psi.CreateNoWindow = true;
+                    Process.Start(psi);
                     Environment.Exit(0);
                 }
             }

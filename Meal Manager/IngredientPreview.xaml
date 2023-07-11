@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Meal_Planner.Meal_Manager.IngredientPreview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Meal_Planner.Meal_Manager"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="1900" Background="#FFA7A7A7">
+    <Grid Name="main_grid" HorizontalAlignment="Left" Width="1900">
+        <Label x:Name="ingredient_name" Content="Tehéntej pasztőrözött (2.8% zsírtart)" Margin="10,10,60,10" d:LayoutOverrides="Height" FontSize="30" FontFamily="Comic Sans MS" HorizontalContentAlignment="Center" Padding="0,0,0,0" VerticalContentAlignment="Center" Width="710" HorizontalAlignment="Left"/>
+        <Label x:Name="energy_value" Content="10000" Margin="720,10,-75,10" FontSize="30" FontFamily="Comic Sans MS" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="168" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="protein_value" Content="100,00" Margin="888,10,-276,10" FontSize="30" FontFamily="Comic Sans MS" HorizontalContentAlignment="Center" d:LayoutOverrides="Height" Width="168" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+        <Label x:Name="fat_value" Margin="1056,10,0,10" FontSize="30" FontFamily="Comic Sans MS" HorizontalContentAlignment="Center" Width="144" d:LayoutOverrides="Height" HorizontalAlignment="Left" VerticalContentAlignment="Center" Content="100,00"/>
+        <Label x:Name="carbohydrate_value" Content="100,00" Margin="1200,9,0,10" FontSize="30" FontFamily="Comic Sans MS" HorizontalContentAlignment="Center" Width="204" HorizontalAlignment="Left" d:LayoutOverrides="Height" VerticalContentAlignment="Center"/>
+        <Label x:Name="portion_type" Content="100g" Margin="0,80,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Height="40" Padding="0,0,0,0" HorizontalAlignment="Left" Width="696" VerticalContentAlignment="Bottom" FontSize="20"/>
+        <Label x:Name="past_action_value" Content="100,00" Margin="1404,9,0,10" FontSize="30" FontFamily="Comic Sans MS" HorizontalContentAlignment="Center" Width="468" HorizontalAlignment="Left" d:LayoutOverrides="Height" VerticalContentAlignment="Center"/>
+        
+
+    </Grid>
+</UserControl>

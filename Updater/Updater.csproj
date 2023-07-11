@@ -5,6 +5,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Meal Planner</AssemblyName>
+    <ApplicationIcon>Data\icons\breakfast.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,10 @@
     <None Remove="Data\GRM\Github Release Manger.runtimeconfig.json" />
     <None Remove="Data\GRM\GRM Build Tracker.dll" />
     <None Remove="Data\GRM\Octokit.dll" />
+    <None Remove="Data\icons\breakfast.ico" />
+    <None Remove="Data\icons\breakfast.png" />
+    <None Remove="Data\icons\lunch.ico" />
+    <None Remove="Data\icons\lunch.png" />
     <None Remove="Data\Tokens.grm" />
   </ItemGroup>
 
@@ -30,6 +36,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\GRM\Octokit.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\icons\breakfast.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\icons\breakfast.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\icons\lunch.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\icons\lunch.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Tokens.grm">
